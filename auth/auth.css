@@ -1,0 +1,12 @@
+.auth-page{
+  background: var(--cream, #F0D8BE);
+  padding: 40px 20px;
+}
+.auth-card{
+  max-width: 420px;
+  width: 100%;
+}
+.auth-logo img{ height: 52px; width:auto; }
+.auth-sub{ font-size: 14px; }
+.auth-switch{ font-size: 13px; }
+.auth-switch a{ color: var(--terracotta, #874F38); font-weight:600; }

@@ -1,0 +1,24 @@
+# VS Code
+.vscode/
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Composer
+vendor/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Windows
+Thumbs.db
+
+# Mac
+.DS_Store

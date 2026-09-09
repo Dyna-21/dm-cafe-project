@@ -1,0 +1,236 @@
+/* ---------- Bootstrap brand overrides ---------- */
+.nav-link{ color: var(--ink-soft) !important; font-weight:500; }
+.nav-link:hover, .nav-link.active-link{ color: var(--terracotta) !important; }
+.btn-brand-primary{ background: var(--terracotta); color: #fff; border:0; }
+.btn-brand-primary:hover{ background: var(--terracotta-dark); color:#fff; }
+
+
+:root{
+  /* ---- DM Cafe Brand Guide: primary palette ---- */
+  --coffee-brown:   #874F38; /* primary accent */
+  --vanilla-cream:  #F0D8BE; /* primary background */
+  --espresso-black: #000000; /* primary text / dark sections */
+
+  /* ---- Brand Guide: tints (used for panels, lines, hover states) ---- */
+  --coffee-70: #A9765F; /* Coffee Brown 70% */
+  --coffee-50: #C39D89; /* Coffee Brown 50% */
+  --coffee-20: #E4D3C7; /* Coffee Brown 20% */
+  --cream-70:  #F4E4D2; /* Vanilla Cream 70% */
+  --cream-30:  #FBF3EA; /* Vanilla Cream 30% */
+  --black-70:  #4D4D4D; /* Espresso Black 70% */
+  --black-50:  #808080; /* Espresso Black 50% */
+  --black-20:  #CCCCCC; /* Espresso Black 20% */
+
+  /* ---- Semantic aliases (kept so layout selectors below don't change) ---- */
+  --cream:      var(--vanilla-cream);
+  --blush:      var(--cream-70);
+  --ink:        var(--espresso-black);
+  --ink-soft:   var(--black-70);
+  --terracotta: var(--coffee-brown);
+  --terracotta-dark: #6C3C29;
+  --clay-light: var(--coffee-50);
+  --line:       var(--coffee-20);
+  --white:      #FFFFFF;
+  --footer-bg:  var(--espresso-black);
+
+  /* ---- Typography: Montserrat only, per brand guide ---- */
+  --serif: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sans:  "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --wrap: 1180px;
+}
+
+*,*::before,*::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300; /* Montserrat Light for body copy */
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+h1,h2,h3,h4{ font-family: var(--serif); font-weight:400; margin:0 0 .5em; color: var(--ink); } /* Montserrat Regular for headings */
+p{ margin:0 0 1em; color: var(--ink-soft); font-weight: 300; }
+
+.wrap{
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow{
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+/* ---------- story ---------- */
+.story{ padding: 100px 0; }
+.story-inner{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items:center;
+}
+.story-media{ position:relative; }
+.story-img-main{ border-radius: 6px; width:100%; height: 460px; object-fit:cover; }
+.story-img-float{
+  position:absolute;
+  bottom: -40px;
+  right: -30px;
+  width: 45%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 6px solid var(--cream);
+  box-shadow: 0 18px 40px rgba(43,32,22,.18);
+}
+.story-copy h2{ font-size: clamp(28px, 3.4vw, 36px); line-height:1.2; }
+.stat-row{
+  display:flex;
+  gap: 40px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.stat{ display:flex; flex-direction:column; }
+.stat-num{ font-family: var(--serif); font-size: 24px; color: var(--terracotta); font-weight:600; }
+.stat-label{ font-size: 12px; letter-spacing:.05em; text-transform:uppercase; color: var(--ink-soft); margin-top:4px; }
+
+/* ---------- section head ---------- */
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 44px;
+}
+.section-head h2{ font-size: clamp(28px, 3.4vw, 36px); }
+.section-head.center{ flex-direction:column; align-items:center; text-align:center; }
+
+/* ---------- menu price (gigamit gihapon sa menu.php) ---------- */
+.price{ font-family: var(--serif); color: var(--terracotta); font-weight:600; font-size:15px; }
+
+/* ---------- gallery ---------- */
+.gallery-section{ padding: 100px 0; }
+.gallery-heading{ font-size: clamp(28px, 3.4vw, 36px); margin-bottom: 40px; }
+.gallery-photo{
+  border-radius: 6px;
+  height: 320px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ---------- testimonials ---------- */
+.testimonials{ background: var(--blush); padding: 100px 0; }
+.testimonial-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.testimonial-card{
+  margin:0;
+  background: var(--cream);
+  border-radius: 6px;
+  padding: 32px 28px;
+  border: 1px solid var(--line);
+}
+.quote-mark{
+  font-family: var(--serif);
+  font-size: 44px;
+  color: var(--clay-light);
+  line-height:1;
+  display:block;
+  margin-bottom: 8px;
+}
+.testimonial-card p{ font-size: 15px; color: var(--ink-soft); }
+.testimonial-card footer{ margin-top: 18px; display:flex; flex-direction:column; }
+.testimonial-card .name{ font-weight:600; color: var(--ink); font-size:14px; }
+.testimonial-card .role{ font-size: 12px; color: var(--terracotta); margin-top:2px; }
+
+/* ---------- find us ---------- */
+.find-us-section{ padding: 100px 0; }
+.find-us-heading{ font-size: clamp(28px, 3.4vw, 36px); }
+.find-us-lede{ max-width: 480px; }
+.find-icon{
+  width: 38px; height: 38px;
+  flex: 0 0 38px;
+  border-radius: 50%;
+  background: var(--blush);
+  display:flex; align-items:center; justify-content:center;
+  font-size: 16px;
+}
+.find-item-title{ font-family: var(--sans); font-size: 14px; font-weight:600; margin:0 0 4px; color: var(--ink); }
+.find-item-text{ font-size: 14px; margin:0; }
+.find-us-map-img{
+  border-radius: 8px;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+/* ---------- footer ---------- */
+.brand{ display:flex; align-items:center; font-family: var(--serif); }
+.brand-logo-img{ height: 55px; width: auto; display:block; }
+.site-footer{ background: var(--footer-bg); color: var(--clay-light); }
+.footer-inner{
+  display:grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 48px;
+  padding: 70px 32px 50px;
+}
+.footer-brand p{ color: #B8A991; font-size: 14px; margin-top: 14px; max-width: 320px; }
+.footer-col h5{
+  font-size: 12px; letter-spacing:.14em; text-transform:uppercase;
+  color: var(--clay-light); margin-bottom: 18px; font-family: var(--sans); font-weight:600;
+}
+.footer-col a{
+  display:block;
+  color: #C9BBA5;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.footer-col a:hover{ color: var(--white); }
+.social-row{ display:flex; gap: 16px; margin-top: 6px; }
+.social-row a{ margin:0; }
+
+.footer-bottom{ border-top: 1px solid rgba(255,255,255,.08); }
+.footer-bottom-inner{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 22px 32px;
+  font-size: 12px;
+  color: #8B7A64;
+}
+.footer-legal a{ color: #8B7A64; }
+.footer-legal a:hover{ color: var(--white); }
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+@media (max-width: 980px){
+  .story-inner{ grid-template-columns: 1fr; }
+  .story-media{ margin-bottom: 60px; }
+  .testimonial-grid{ grid-template-columns: 1fr; }
+  .footer-inner{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px){
+  .story-img-float{ position: static; width: 60%; margin-top: 20px; border: none; box-shadow:none; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+}
