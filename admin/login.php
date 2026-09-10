@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="../auth/auth.css">
 </head>
-<body class="auth-page d-flex align-items-center justify-content-center min-vh-100" style="background: var(--espresso-black, #000);">
+<body class="auth-page d-flex align-items-center justify-content-center min-vh-100">
 
 <div class="auth-card card shadow-lg border-0 p-4 p-md-5 text-center">
   <h1 class="h3 mb-1">Admin Login</h1>
