@@ -42,9 +42,10 @@ try {
     $order_id = $pdo->lastInsertId();
 
     // 2. Copy cart items to order_items
-    $stmt = $pdo->prepare("INSERT INTO order_items (order_id, product_name, price, quantity) VALUES (:order_id, :product_name, :price, :quantity)");
+    $stmt = $pdo->prepare("INSERT INTO order_items (order_id, product_id, product_name, price, quantity) VALUES (:order_id, :product_id, :product_name, :price, :quantity)");
     foreach ($cart_items as $item) {
         $stmt->bindValue(':order_id', $order_id);
+        $stmt->bindValue(':product_id', $item['product_id']);
         $stmt->bindValue(':product_name', $item['product_name']);
         $stmt->bindValue(':price', $item['price']);
         $stmt->bindValue(':quantity', $item['quantity']);
