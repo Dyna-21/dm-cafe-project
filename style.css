@@ -120,6 +120,17 @@ p{ margin:0 0 1em; color: var(--ink-soft); font-weight: 300; }
 /* ---------- menu price (gigamit gihapon sa menu.php) ---------- */
 .price{ font-family: var(--serif); color: var(--terracotta); font-weight:600; font-size:15px; }
 
+/* ---------- menu image hover effect ---------- */
+.menu-photo-wrap{
+  overflow: hidden;
+}
+.menu-photo-wrap img{
+  transition: transform 0.35s ease;
+}
+.menu-photo-wrap:hover img{
+  transform: scale(1.08);
+}
+
 /* ---------- gallery ---------- */
 .gallery-section{ padding: 100px 0; }
 .gallery-heading{ font-size: clamp(28px, 3.4vw, 36px); margin-bottom: 40px; }

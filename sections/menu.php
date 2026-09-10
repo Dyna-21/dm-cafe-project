@@ -31,7 +31,9 @@ $menu_items = $pdo->query("SELECT * FROM menu WHERE is_available = 1 ORDER BY ca
         <?php foreach ($menu_items as $item): ?>
           <div class="col-md-6 col-lg-3">
             <article class="card h-100 border-0" style="background: var(--cream); border-radius:6px; overflow:hidden;">
-              <img src="<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>" class="card-img-top" style="height:170px; object-fit:cover;">
+              <div class="menu-photo-wrap">
+                <img src="<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>" class="card-img-top" style="height:170px; object-fit:cover;">
+              </div>
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
                   <h3 class="h5 mb-0"><?= htmlspecialchars($item['name']) ?></h3>
