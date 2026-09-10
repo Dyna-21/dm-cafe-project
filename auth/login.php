@@ -1,3 +1,4 @@
+
 <?php
 require __DIR__ . '/functions.php';
 if (session_status() === PHP_SESSION_NONE) session_start();
@@ -17,7 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($user && password_verify($password, $user["password"])) {
             $_SESSION["user_id"]   = $user["id"];
             $_SESSION["user_name"] = $user["full_name"];
-            header("Location: ../index.php");
+
+            // I-check kung admin ba o customer, unya i-redirect sa tarong nga lugar
+            if (isset($user["role"]) && $user["role"] === "admin") {
+                $_SESSION["is_admin"] = true;
+                header("Location: ../admin/index.php");
+            } else {
+                header("Location: ../index.php");
+            }
             exit;
         } else {
             $errors[] = "Incorrect email or password.";

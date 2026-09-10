@@ -26,7 +26,7 @@ function registerUser($full_name, $email, $password) {
 
 function findUserByEmail($email) {
     $pdo = getConnection();
-    $stmt = $pdo->prepare("SELECT id, full_name, password FROM users WHERE email = :email");
+    $stmt = $pdo->prepare("SELECT id, full_name, password, role FROM users WHERE email = :email");
     $stmt->bindValue(':email', $email);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);

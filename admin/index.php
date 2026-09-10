@@ -29,7 +29,7 @@ $recent_orders = $pdo->query("
 <div class="d-flex">
   <?php include __DIR__ . '/includes/sidebar.php'; ?>
 
-  <div class="flex-grow-1 p-4" style="background:#f8f5f1; min-height:100vh;">
+  <div class="flex-grow-1 p-4" style="background: var(--cream); min-height:100vh;">
     <h1 class="h3 mb-4">Dashboard</h1>
 
     <div class="row g-4 mb-4">

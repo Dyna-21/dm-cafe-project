@@ -14,7 +14,7 @@ $menu_items = $pdo->query("SELECT * FROM menu WHERE is_available = 1 ORDER BY ca
         <p class="eyebrow">The Flavors</p>
         <h2 style="font-size:clamp(28px,3.4vw,36px);">Crafted with Intention</h2>
       </div>
-      <a href="cart/view-cart.php" class="btn btn-outline-dark btn-sm px-3">Cart</a>
+      <a href="cart/view-cart.php" class="btn btn-dark btn-sm px-3">Cart</a>
     </div>
 
     <?php if (isset($_SESSION['cart_message'])): ?>

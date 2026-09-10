@@ -31,5 +31,5 @@
     </li>
   </ul>
   <hr>
-  <a href="logout.php" class="text-white text-decoration-none small">Log Out</a>
+  <a href="../auth/logout.php" class="text-white text-decoration-none small">Log Out</a>
 </div>

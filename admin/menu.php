@@ -23,7 +23,7 @@ $menu_items = $pdo->query("SELECT * FROM menu ORDER BY category, name")->fetchAl
 <div class="d-flex">
   <?php include __DIR__ . '/includes/sidebar.php'; ?>
 
-  <div class="flex-grow-1 p-4" style="background:#f8f5f1; min-height:100vh;">
+  <div class="flex-grow-1 p-4" style="background: var(--cream); min-height:100vh;">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h1 class="h3 mb-0">Menu Management</h1>
       <a href="menu_form.php" class="btn btn-brand-primary">+ Add New Item</a>
