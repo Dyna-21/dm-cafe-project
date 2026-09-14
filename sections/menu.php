@@ -30,16 +30,16 @@ $menu_items = $pdo->query("SELECT * FROM menu WHERE is_available = 1 ORDER BY ca
       <?php else: ?>
         <?php foreach ($menu_items as $item): ?>
           <div class="col-md-6 col-lg-3">
-            <article class="card h-100 border-0" style="background: var(--cream); border-radius:6px; overflow:hidden;">
+            <article class="card h-100 border-0 menu-card-hover" style="background: var(--coffee-70); border-radius:6px; overflow:hidden;">
               <div class="menu-photo-wrap">
                 <img src="<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>" class="card-img-top" style="height:170px; object-fit:cover;">
               </div>
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
-                  <h3 class="h5 mb-0"><?= htmlspecialchars($item['name']) ?></h3>
-                  <span class="price">₱<?= number_format($item['price'], 2) ?></span>
+                  <h3 class="h5 mb-0 text-white"><?= htmlspecialchars($item['name']) ?></h3>
+                  <span class="text-white fw-semibold" style="font-family: var(--serif);">₱<?= number_format($item['price'], 2) ?></span>
                 </div>
-                <p class="small text-muted"><?= htmlspecialchars($item['description']) ?></p>
+                <p class="small" style="color: rgba(255,255,255,0.85);"><?= htmlspecialchars($item['description']) ?></p>
                 <form method="POST" action="cart/add_to_cart.php" class="d-flex align-items-center gap-2 mt-3">
                   <input type="hidden" name="product_id" value="<?= (int)$item['id'] ?>">
                   <input type="hidden" name="product_name" value="<?= htmlspecialchars($item['name']) ?>">

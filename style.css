@@ -131,6 +131,15 @@ p{ margin:0 0 1em; color: var(--ink-soft); font-weight: 300; }
   transform: scale(1.08);
 }
 
+/* ---------- menu card hover effect ---------- */
+.menu-card-hover{
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.menu-card-hover:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
 /* ---------- gallery ---------- */
 .gallery-section{ padding: 100px 0; }
 .gallery-heading{ font-size: clamp(28px, 3.4vw, 36px); margin-bottom: 40px; }
