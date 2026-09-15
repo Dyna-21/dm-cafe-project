@@ -29,6 +29,11 @@
         Customers
       </a>
     </li>
+    <li class="nav-item">
+      <a href="reports.php" class="nav-link text-white <?= $current === 'reports.php' ? 'active' : '' ?>" style="<?= $current === 'reports.php' ? 'background: var(--terracotta);' : '' ?>">
+        Reports
+      </a>
+    </li>
   </ul>
   <hr>
   <a href="../auth/logout.php" class="text-white text-decoration-none small">Log Out</a>
