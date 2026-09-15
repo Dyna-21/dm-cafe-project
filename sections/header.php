@@ -9,7 +9,7 @@ $is_in_cart = (basename(dirname($_SERVER['PHP_SELF'])) == 'cart');
 $path = $is_in_cart ? '../' : '';
 ?>
 <!-- ===== HEADER ===== -->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top py-2" style="background-color: var(--coffee-70); backdrop-filter: blur(8px);">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top py-2" style="background-color: var(--coffee-70); backdrop-filter: blur(8px);">
 
   <div class="container-fluid px-4 px-md-5">
     <a href="<?php echo $path; ?>index.php" class="navbar-brand d-flex align-items-center gap-2 m-0">
@@ -29,7 +29,7 @@ $path = $is_in_cart ? '../' : '';
       <?php if (isset($_SESSION['user_id'])): ?>
         <a href="<?php echo $path; ?>auth/logout.php" class="btn btn-brand-primary btn-sm px-3">Log Out</a>
       <?php else: ?>
-        <a href="<?php echo $path; ?>auth/login.php" class="btn btn-brand-primary btn-sm px-3">Buy Online</a>
+        <a href="<?php echo $path; ?>auth/login.php" class="btn btn-brand-primary btn-sm px-3">Log In</a>
       <?php endif; ?>
     </div>
   </div>
