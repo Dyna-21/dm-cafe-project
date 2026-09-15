@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <div class="auth-card card shadow-lg border-0 p-4 p-md-5 text-center">
   <a href="../index.php" class="auth-logo d-inline-flex mx-auto mb-3">
-    <img src="../assets/dm-wordmark-black1.png" alt="dm CAFE" class="brand-logo-img">
+    <img src="../assets/dm-logo-circle.png" alt="dm CAFE" style="height:70px; width:70px; object-fit:contain;">
   </a>
   <h1 class="h3 mb-1">Welcome Back</h1>
   <p class="auth-sub text-muted mb-4">Log in to order from dm CAFE.</p>

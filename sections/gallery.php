@@ -1,8 +1,8 @@
 <!-- ===== GALLERY ===== -->
-<section id="gallery" class="gallery-section">
+<section id="gallery" class="gallery-section" style="background: var(--coffee-70);">
   <div class="container">
-    <p class="eyebrow">Gallery</p>
-    <h2 class="gallery-heading">A peek inside our space</h2>
+    <p class="eyebrow" style="color: var(--cream);">Gallery</p>
+    <h2 class="gallery-heading text-white">A peek inside our space</h2>
 
     <div class="row g-4">
       <div class="col-md-4">
