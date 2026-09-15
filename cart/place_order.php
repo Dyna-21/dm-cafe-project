@@ -52,7 +52,15 @@ try {
         $stmt->execute();
     }
 
-    // 3. Clear the user's cart
+    // 3. Deduct stock from the menu inventory (Kini ang bag-ong gidugang!)
+    $stock_stmt = $pdo->prepare("UPDATE menu SET stock = stock - :quantity WHERE id = :product_id");
+    foreach ($cart_items as $item) {
+        $stock_stmt->bindValue(':quantity', $item['quantity']);
+        $stock_stmt->bindValue(':product_id', $item['product_id']);
+        $stock_stmt->execute();
+    }
+
+    // 4. Clear the user's cart
     $stmt = $pdo->prepare("DELETE FROM cart WHERE user_id = :user_id");
     $stmt->bindValue(':user_id', $user_id);
     $stmt->execute();
