@@ -9,11 +9,11 @@ $is_in_cart = (basename(dirname($_SERVER['PHP_SELF'])) == 'cart');
 $path = $is_in_cart ? '../' : '';
 ?>
 <!-- ===== HEADER ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top py-2" style="background-color: var(--coffee-70); backdrop-filter: blur(8px);">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top py-2" style="background-color: #f0e4d3; backdrop-filter: blur(8px);">
 
   <div class="container-fluid px-4 px-md-5">
     <a href="<?php echo $path; ?>index.php" class="navbar-brand d-flex align-items-center gap-2 m-0">
-      <img src="<?php echo $path; ?>assets/dm-logo-circle.png" alt="dm CAFE" style="height:65px; width:65px; object-fit:contain;">
+      <img src="<?php echo $path; ?>assets/dm-logo-circle.png" alt="dm CAFE" style="height:70px; width:70px; object-fit:contain;">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
