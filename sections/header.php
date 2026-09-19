@@ -27,9 +27,14 @@ $path = $is_in_cart ? '../' : '';
         <li class="nav-item"><a href="<?php echo $path; ?>find-us.php" class="nav-link <?php echo $current === 'find-us.php' ? 'active-link' : ''; ?>">Find Us</a></li>
       </ul>
       <?php if (isset($_SESSION['user_id'])): ?>
-        <a href="<?php echo $path; ?>auth/logout.php" class="btn btn-brand-primary btn-sm px-3">Log Out</a>
+        <?php
+          $full_name = $_SESSION['user_name'] ?? '';
+          $first_name = trim(explode(' ', $full_name)[0]);
+        ?>
+        <span class="navbar-text fw-semibold me-2">Hi! <?php echo htmlspecialchars($first_name); ?></span>
+        <a href="<?php echo $path; ?>auth/logout.php" class="btn btn-dark btn-sm px-3">Log Out</a>
       <?php else: ?>
-        <a href="<?php echo $path; ?>auth/login.php" class="btn btn-brand-primary btn-sm px-3">Log In</a>
+        <a href="<?php echo $path; ?>auth/login.php" class="btn btn-dark btn-sm px-3">Log In</a>
       <?php endif; ?>
     </div>
   </div>

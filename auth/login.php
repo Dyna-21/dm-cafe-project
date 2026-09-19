@@ -1,7 +1,16 @@
-
 <?php
 require __DIR__ . '/functions.php';
 if (session_status() === PHP_SESSION_NONE) session_start();
+
+// Kung naka-login na, i-redirect dayon paingon sa tarong nga page
+if (isset($_SESSION['user_id'])) {
+    if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true) {
+        header("Location: ../admin/index.php");
+    } else {
+        header("Location: ../index.php");
+    }
+    exit;
+}
 
 $errors = [];
 $email = "";
